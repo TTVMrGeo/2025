@@ -1,0 +1,2 @@
+UsernameArray = ["123456Alice", "234567Bob", "345678Charlie", "456789David", "567890Eve", "678901Frank"]
+for j in range(len(UsernameArray)): print(str(len(UsernameArray[j]))+(UsernameArray[j])[6:9].upper()+(UsernameArray[j])[len(UsernameArray[j])-2:].lower())
