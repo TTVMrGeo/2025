@@ -1,0 +1,38 @@
+DECLARE ans : INTEGER //random comments
+
+FUNCTION factorial(num : INTEGER) RETURNS INTEGER
+    DECLARE count, fact : INTEGER
+    fact ← 1
+    FOR count ← 1 TO num
+        fact ← fact * count   //more
+    NEXT count
+    IF num < 0 THEN
+        RETURN -1
+    ELSE
+        RETURN fact  //still more
+    ENDIF
+ENDFUNCTION
+
+//whatever
+
+FUNCTION findBase(num : INTEGER) RETURNS INTEGER
+    DECLARE count : INTEGER
+    DECLARE test : REAL
+    test ← num
+    count ←  0
+    WHILE test > 1 
+        count ← count + 1
+        test ← test / count
+        IF test <> INT(test) THEN
+            RETURN -1
+        ENDIF
+    ENDWHILE
+    RETURN count
+ENDFUNCTION
+
+
+
+//Main
+// ans ← factorial(-1)
+ans ← findBase(120)
+OUTPUT ans
